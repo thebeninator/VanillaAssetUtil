@@ -19,7 +19,7 @@ namespace VanillaAssetUtil.AssetUtil
             ReleaseTempVanillaAssets();
         }
 
-        public static void Create(int build_idx)
+        internal static void Create(int build_idx)
         {
             if (Instance != null) return;
 
@@ -36,7 +36,7 @@ namespace VanillaAssetUtil.AssetUtil
             SceneManager.MoveGameObjectToScene(db, SceneManager.GetSceneByBuildIndex(build_idx));
         }
 
-        public void AddReference(AssetReference prefab_ref, bool temp = false)
+        internal void AddReference(AssetReference prefab_ref, bool temp = false)
         {
             if (temp && !LoadedAssetReferences.Contains(prefab_ref))
             {
@@ -54,17 +54,17 @@ namespace VanillaAssetUtil.AssetUtil
             }
         }
 
-        public void ReleaseTempVanillaAssets()
+        internal void ReleaseTempVanillaAssets()
         {
             ReleaseAssets(TempAssetReferences, true);
         }
 
-        public void ReleaseVanillaAssets()
+        internal void ReleaseVanillaAssets()
         {
             ReleaseAssets(LoadedAssetReferences);
         }
 
-        public IEnumerator ReleaseTempVanillaAssetsDeferred(GameState _)
+        internal IEnumerator ReleaseTempVanillaAssetsDeferred(GameState _)
         {
             ReleaseTempVanillaAssets();
             yield break;

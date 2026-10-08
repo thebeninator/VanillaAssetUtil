@@ -10,14 +10,6 @@ using GHPC.Effects;
 
 namespace VanillaAssetUtil.ModUtil
 {
-    public sealed class AlreadyConverted : MonoBehaviour
-    {
-        void Awake()
-        {
-            enabled = false;
-        }
-    }
-
     public sealed class Util
     {
         public static ImpactEffectsDatabaseScriptable impact_fx_db;
