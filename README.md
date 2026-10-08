@@ -32,5 +32,7 @@ ___
 GameObject CloneVanillaGameObject(string unique_name, string path)
 ```
 Temporarily loads the specified vanilla vehicle and returns the cloned GameObject at the specified path
+
 `unique_name` is the unique name of the vehicle (as seen in `Unit.UniqueName` or `UnitPrefabMetadata.Name`)
+
 `path` is the prefab-relative path to the GameObject that is to be cloned
