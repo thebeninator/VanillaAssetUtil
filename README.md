@@ -1,5 +1,6 @@
 # VanillaAssetUtil
 ```C#
+// VanillaAssetUtil.AssetUtil.AssetUtilApi
 Vehicle LoadVanillaVehicle(string unique_name, bool temp = false)
 ```
 Loads a vanilla vehicle's prefab, returning its Vehicle component 
