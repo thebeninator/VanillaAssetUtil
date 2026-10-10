@@ -14,6 +14,14 @@ namespace VanillaAssetUtil
     public class Mod : MelonMod
     {
         private int valid_scene_count = 0;
+        internal static MelonPreferences_Entry<bool> legacy_mode;
+
+        public override void OnInitializeMelon()
+        {
+            MelonPreferences_Category cfg = MelonPreferences.CreateCategory("VanillaAssetUtil");
+            legacy_mode = cfg.CreateEntry<bool>("Legacy Mode", false);
+            legacy_mode.Description = "Prevents temporary vanilla assets from being unloaded, for compatiblty with mods that use the old AssetUtil.cs script";
+        }
 
         public override void OnSceneWasLoaded(int build_idx, string scene_name)
         {

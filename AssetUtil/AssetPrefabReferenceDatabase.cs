@@ -38,6 +38,11 @@ namespace VanillaAssetUtil.AssetUtil
 
         internal void AddReference(AssetReference prefab_ref, bool temp = false)
         {
+            if (Mod.legacy_mode.Value)
+            {
+                temp = false;
+            }
+
             if (temp && !LoadedAssetReferences.Contains(prefab_ref))
             {
                 TempAssetReferences.Add(prefab_ref);
