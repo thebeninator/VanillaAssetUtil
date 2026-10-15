@@ -6,7 +6,7 @@ using VanillaAssetUtil.ModUtil;
 using VanillaAssetUtil.AssetUtil;
 
 [assembly: MelonPriority(-500)]
-[assembly: MelonInfo(typeof(Mod), "Vanilla Asset Util", "1.0.0", "ATLAS")]
+[assembly: MelonInfo(typeof(Mod), "Vanilla Asset Util", "1.0.1", "ATLAS")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace VanillaAssetUtil
@@ -25,7 +25,7 @@ namespace VanillaAssetUtil
 
         public override void OnSceneWasLoaded(int build_idx, string scene_name)
         {
-            if (Util.menu_screens.Contains(scene_name)) return;
+            if (Util.MenuScreensWithLoader.Contains(scene_name)) return;
 
             valid_scene_count++;
 
