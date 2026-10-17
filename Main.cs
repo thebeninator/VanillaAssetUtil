@@ -6,7 +6,7 @@ using VanillaAssetUtil.ModUtil;
 using VanillaAssetUtil.AssetUtil;
 
 [assembly: MelonPriority(-500)]
-[assembly: MelonInfo(typeof(Mod), "Vanilla Asset Util", "1.0.1", "ATLAS")]
+[assembly: MelonInfo(typeof(Mod), "Vanilla Asset Util", "1.0.2", "ATLAS")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace VanillaAssetUtil

@@ -59,6 +59,14 @@ namespace VanillaAssetUtil.AssetUtil
             }
         }
 
+        internal void UnregisterTempReference(AssetReference prefab_ref)
+        {
+            if (TempAssetReferences.Contains(prefab_ref))
+            {
+                TempAssetReferences.Remove(prefab_ref);
+            }
+        }
+
         internal void ReleaseTempVanillaAssets()
         {
             ReleaseAssets(TempAssetReferences, true);
