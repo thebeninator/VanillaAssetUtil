@@ -36,3 +36,7 @@ Temporarily loads the specified vanilla vehicle and returns the cloned GameObjec
 `unique_name` is the unique name of the vehicle (as seen in `Unit.UniqueName` or `UnitPrefabMetadata.Name`)
 
 `path` is the prefab-relative path to the GameObject that is to be cloned
+
+An example of the intended use case for this can be seen here:
+https://github.com/thebeninator/Pact-Increased-Lethality/blob/5e24f438ed447d5458af99cf1bb2bc6f9cc986b1/Vics/BMP3.cs#L746-L751
+https://github.com/thebeninator/Pact-Increased-Lethality/blob/5e24f438ed447d5458af99cf1bb2bc6f9cc986b1/Vics/BMP3.cs#L253-L254
