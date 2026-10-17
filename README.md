@@ -9,7 +9,6 @@ Loads a vanilla vehicle's prefab, returning its Vehicle component
 If `temp` is set to true, then the prefab will be unloaded as soon as the mission finishes loading
 
 ___
-
 ```C#
 bool VehicleInMission(string prefab_name)
 ```
@@ -36,7 +35,9 @@ Temporarily loads the specified vanilla vehicle and returns the cloned GameObjec
 `unique_name` is the unique name of the vehicle (as seen in `Unit.UniqueName` or `UnitPrefabMetadata.Name`)
 
 `path` is the prefab-relative path to the GameObject that is to be cloned
-
+\
+\
+\
 This method is meant to be used like this:
 
 https://github.com/thebeninator/Pact-Increased-Lethality/blob/5e24f438ed447d5458af99cf1bb2bc6f9cc986b1/Vics/BMP3.cs#L746-L751
