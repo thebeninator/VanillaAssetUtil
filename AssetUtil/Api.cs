@@ -27,7 +27,10 @@ namespace VanillaAssetUtil.AssetUtil
                 return prefab_ref.LoadAssetAsync<GameObject>().WaitForCompletion().GetComponent<Vehicle>();
             }
 
-            AssetPrefabReferenceDatabase.Instance.UnregisterTempReference(prefab_ref);
+            if (!temp)
+            {
+                AssetPrefabReferenceDatabase.Instance.UnregisterTempReference(prefab_ref);
+            }
 
             return (prefab_ref.Asset as GameObject).GetComponent<Vehicle>();
         }
