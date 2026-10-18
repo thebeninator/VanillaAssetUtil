@@ -6,9 +6,7 @@ Loads a vanilla vehicle's prefab, returning its Vehicle component
 
 `unique_name` is the unique name of the vehicle (as seen in `Unit.UniqueName` or `UnitPrefabMetadata.Name`)
 
-If `temp` is set to true, then the prefab will be unloaded as soon as the mission finishes loading
-
-Temporary prefabs are unloaded when `GameState.GameReady` is reached (low priority)
+If `temp` is set to true, then the prefab will be unloaded as soon as the mission finishes loading (when `GameState.GameReady` is reached (low priority))
 
 Otherwise, prefabs are mission persistent and will be unloaded when the mission is exited 
 
